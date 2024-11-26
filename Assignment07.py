@@ -27,7 +27,6 @@ students: list = []  # a table of student data
 menu_choice: str  # Hold the choice made by the user.
 
 
-# TODO Create a Person Class
 class Person:
     """
     A class representing person data
@@ -40,12 +39,10 @@ class Person:
     Edwin Kintu-Lubowa,11/23/2024,Created the class.
     """
 
-    # TODO Add first_name and last_name properties to the constructor (Done)
     def __init__(self, first_name: str = "", last_name: str = ""):
         self.first_name = first_name
         self.last_name = last_name
 
-    # TODO Create a getter and setter for the first_name property (Done)
     @property  # (Use this decorator for the getter or accessor)
     def first_name(self):
         return self.__first_name.title()   # formatting code
@@ -57,7 +54,6 @@ class Person:
         else:
             raise ValueError("First name should not contain numbers!")
 
-    # TODO Create a getter and setter for the last_name property (Done)
     @property  # (Use this decorator for the getter or accessor)
     def last_name(self):
         return self.__last_name.title()   # formatting code
@@ -69,12 +65,10 @@ class Person:
         else:
             raise ValueError("Last name should not contain numbers!")
 
-# TODO Override the __str__() method to return Person data (Done)
     def __str__(self):
         return f"{self.first_name},{self.last_name}"
 
 
-# TODO Create a Student class the inherits from the Person class (Done)
 class Student(Person):
     """
        A class representing student data
@@ -91,22 +85,17 @@ class Student(Person):
        """
 
     def __init__(self, first_name: str = "", last_name: str = "", course_name: str = ""):
-        # TODO call to the Person constructor and pass it the first_name and last_name data (Done)
         super().__init__(first_name=first_name, last_name=last_name)
-        # TODO add a assignment to the course_name property using the course_name parameter (Done)
         self.course_name = course_name
 
-    # TODO add the getter for course_name (Done)
     @property  # (Use this decorator for the getter or accessor)
     def course_name(self):
         return self.__course_name.title()   # formatting code
 
-    # TODO add the setter for course_name (Done)
     @course_name.setter  # (use this decorator for the setter or mutator)
     def course_name(self, value: str):
         self.__course_name = value
 
-# TODO Override the __str__() method to return the Student data (Done)
     def __str__(self):
         return f"{self.first_name},{self.last_name},{self.course_name}"
 
@@ -330,6 +319,7 @@ class IO:
         return student_data
 
         # --------------------------------------------------------------------------------------------------- #
+        # will not be using this it of code; validation and error handling performed in the Data layer
         # try:
         #     student_first_name = input("Enter the student's first name: ")
         #     if not student_first_name.isalpha():
