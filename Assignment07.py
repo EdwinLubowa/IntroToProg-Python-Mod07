@@ -39,10 +39,12 @@ class Person:
     Edwin Kintu-Lubowa,11/23/2024,Created the class.
     """
 
+    # Create a constructor with private attributes for the first_name and last_name data
     def __init__(self, first_name: str = "", last_name: str = ""):
         self.first_name = first_name
         self.last_name = last_name
 
+    # Create property getter and setter for first name using the same code as in the Student class
     @property  # (Use this decorator for the getter or accessor)
     def first_name(self):
         return self.__first_name.title()   # formatting code
@@ -54,6 +56,7 @@ class Person:
         else:
             raise ValueError("First name should not contain numbers!")
 
+    # Create property getter and setter for last name using the same code as in the Student class
     @property  # (Use this decorator for the getter or accessor)
     def last_name(self):
         return self.__last_name.title()   # formatting code
@@ -65,6 +68,7 @@ class Person:
         else:
             raise ValueError("Last name should not contain numbers!")
 
+    # Add code to inherit code from the person class
     def __str__(self):
         return f"{self.first_name},{self.last_name}"
 
@@ -84,6 +88,7 @@ class Student(Person):
        Edwin Kintu-Lubowa,11/23/2024,Moved first_name and last_name into parent class
        """
 
+    # Create a constructor with private attributes for the first_name, last_name ,and course name data
     def __init__(self, first_name: str = "", last_name: str = "", course_name: str = ""):
         super().__init__(first_name=first_name, last_name=last_name)
         self.course_name = course_name
@@ -349,7 +354,7 @@ class IO:
 students = FileProcessor.read_data_from_file(file_name=FILE_NAME, student_data=students)
 
 # Present and Process the data
-while (True):
+while True:
 
     # Present the menu of choices
     IO.output_menu(menu=MENU)
