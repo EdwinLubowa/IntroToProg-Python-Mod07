@@ -149,8 +149,7 @@ class FileProcessor:
                 file.close()
         return student_data
 
-        # -------------------------------------------------------------------------------------------------- #
-        # will not be using the code below; it does not handle student objects
+        # I will not be using the code below; it does not handle student objects
         # try:
         #     file = open(file_name, "r")
         #     student_data = json.load(file)
@@ -162,7 +161,6 @@ class FileProcessor:
         #     if file.closed == False:
         #         file.close()
         # return student_data
-        # ------------------------------------------------------------------------------------------------- #
 
     @staticmethod
     def write_data_to_file(file_name: str, student_data: list):
@@ -196,8 +194,7 @@ class FileProcessor:
             if not file.closed:
                 file.close()
 
-        # --------------------------------------------------------------------------- #
-        # will not be using the code below; it does not handle student objects
+        # I will not be using the code below; it does not handle student objects
         # try:
         #     file = open(file_name, "w")
         #     json.dump(student_data, file)
@@ -210,7 +207,6 @@ class FileProcessor:
         # finally:
         #     if file.closed == False:
         #         file.close()
-        # ---------------------------------------------------------------------------- #
 
 
 # Presentation -------------------------------------------------------------------------------- #
@@ -323,8 +319,7 @@ class IO:
             IO.output_error_messages("There was a non-specific error!", e)
         return student_data
 
-        # --------------------------------------------------------------------------------------------------- #
-        # will not be using this it of code; validation and error handling performed in the Data layer
+        # I will not be using this it of code; validation and error handling performed in the Data layer
         # try:
         #     student_first_name = input("Enter the student's first name: ")
         #     if not student_first_name.isalpha():
@@ -344,7 +339,6 @@ class IO:
         # except Exception as e:
         #     IO.output_error_messages(message="Error: There was a problem with your entered data.", error=e)
         # return student_data
-        # ---------------------------------------------------------------------------------------------------- #
 
 
 # Start of main body
@@ -380,13 +374,11 @@ while True:
     elif menu_choice == "4":  # End the program
         break  # out of the while loop
 
-    # ------------------------------------------------------------------------------------- #
-    # will not be using the code below, processing performed by input_menu_choice() function
+    # I will not be using the code below, processing performed by input_menu_choice() function
     # elif menu_choice == "4":
     #     break  # out of the loop
     # else:
-    #     print("Please only choose option 1, 2, or 3")
-    # ------------------------------------------------------------------------------------- #
+    #     print("Please only choose option 1, 2, 3 or 4")
 
 print("Program Ended")
 
